@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Scrape Script</title>
+</head>
+<body>
+    <div class="title-div">
+        <a href="/" style="text-decoration: none; color: black;">
+            <h1 class="title-txt">Scrape Script <span>(Amazon)</span></h1>
+        </a>
+    </div>
+
+    <main>
+        <div class="input-div">
+            <form action="/api/scrape" method="get">
+                <input type="text" name="product" id="input" placeholder="Type the input">
+                <input type="submit" value="SUBMIT" name="submit" id="submit">
+            </form>
+        </div>
+
+        <div class="products-div">
+            <% if (products.length > 0) { %>
+                <% for (let i = 0; i < products.length; i++) { %>
+                <div class="product">
+                    <img src="<%= products[i].imgUrl %>"" alt="product-image">
+                    <p class="prod-name"><%= products[i].title %></p>
+                    <p class="prod-stars"><strong>Stars:</strong> <%= products[i].rating %></p>
+                    <p class="prod-reviews"><strong>Reviews:</strong> <%= products[i].reviews %></p>
+                </div>
+                <% } %>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
