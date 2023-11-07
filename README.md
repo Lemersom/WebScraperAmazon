@@ -22,25 +22,25 @@ The "Web Scraper for Amazon Product Data" is a web scraping application built to
 Clone the project
 
 ```bash 
-git clone https://github.com/Lemersom/WebScraperAmazon.git`
+git clone https://github.com/Lemersom/WebScraperAmazon.git
 ```
 
 Navigate to the project directory
 
 ```bash 
-`cd WebScraperAmazon`
+cd WebScraperAmazon
 ```
  
 Install the dependencies
 
 ```bash
-`npm install`
+npm install
 ```
 
 Start the server
 
 ```bash 
-`npm start`
+npm start
 ```
 
 Acess the App at http://localhost:3000
