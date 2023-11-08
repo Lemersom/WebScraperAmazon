@@ -78,3 +78,8 @@ main{
 .prod-stars, .prod-reviews{
     font-size: 20px;
 }
+
+.error-msg{
+    font-size: 20px;
+    padding: 3px;
+}

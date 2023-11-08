@@ -27,7 +27,6 @@ router.get('/', async (req, res) => {
         const $ = cheerio.load(response.data)
 
         $('.s-asin').each((index, el) => {
-            console.log('teste')
             const product = {
                 "title": $(el).find('h2 span').text(),
                 "rating": $(el).find('.a-spacing-top-micro span').attr('aria-label'),
@@ -40,9 +39,11 @@ router.get('/', async (req, res) => {
     }
     catch (error){
         console.log(error)
+        res.render('index', {products: '', error: error})
+        return
     }
     
-    res.render('index', {products: products})
+    res.render('index', {products: products, error: ''})
 })
 
 module.exports = router

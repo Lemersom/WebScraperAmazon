@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
-    res.render('index', {products: ''})
+    res.render('index', {products: '', error: ''})
 })
 
 app.use('/api/scrape', require("./routes/scrape.js"))
